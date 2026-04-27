@@ -12,5 +12,7 @@ print("For this quiz we require you age.")
 AGE=int(input("Please enter your age. "))
 if AGE >=14 :
     print("Sorry "+NAME+", you're too old for this quiz, why don't you check out our 14+ quiz.")
+elif AGE <=7 :
+    print("Sorry "+NAME+", you're too young for this quiz, why don't you check out our under 8s quiz.")
 else:
-    print("your sweet as to continue. ")
+    print("Your sweet as to continue. ")
