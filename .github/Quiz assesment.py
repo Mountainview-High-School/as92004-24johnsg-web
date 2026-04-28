@@ -3,8 +3,10 @@
 import time 
 
 print("Hi there thank you for particeptating im my quiz")
-time.sleep(0.5)
-NAME=input("Please enter your name. ")
+time.sleep(0.5)            #this is a delay do make the program wait for 0.5 seconds
+NAME=input("Please enter your full name. ")    #this line asks the players name and stores it in a variable called NAME
+FIRSTNAME=NAME.split(" ")
+print(FIRSTNAME)
 time.sleep(0.5)
 print("Thank you "+NAME)
 time.sleep(0.5)
@@ -14,5 +16,6 @@ if AGE >=14 :
     print("Sorry "+NAME+", you're too old for this quiz, why don't you check out our 14+ quiz.")
 elif AGE <=7 :
     print("Sorry "+NAME+", you're too young for this quiz, why don't you check out our under 8s quiz.")
+    time.sleep(0.5)
 else:
     print("Your sweet as to continue. ")
