@@ -1,6 +1,7 @@
 #this is my assesment questionaire 
 
-import time               #this is how i use delays (time.sleep(1))
+import time              #this is how i use delays (time.sleep(1))
+guesses = 0
 print("Hi there thank you for particeptating im my quiz")
 time.sleep(0.5)            #this is a delay to make the program wait for 0.5 seconds
 name=input("Please enter your full name. ")    #this line asks the players name and stores it in a variable called NAME
@@ -23,11 +24,12 @@ else:
                  "You want to join an online gaming site, what should you username be? @ A- A nickname. @ B- Your name. @ C- Your email address",
                  "Someone in your class has posted their first video on YouTube and has asked you to comment on it. You don’t think the video is good because the editing is very choppy. What could you comment? @ A- Your video is rubbish! @ B- Man, this is awful! Stick to playing sport or somthing. @ C- Congrats on your first video! Let me know if you’d like any help editing for your next video. ",
                  "Someone in your class is a real bully. Some of the other people in your class say: “Let’s get them back, and spam them with random texts.” What do you reply? @ A- “We shouldn’t be mean to them just because they’re mean to us.” @ B- “Yeah, totally. They’re evil and deserve it!” @ C- “Yes, I think that is a great idea. Maybe they will understand what it feels like, and stop bullying us!”"]
-    answers = ["B","C","A","C","A"]
+    answers = ["B q1","C q2","A q3","C q4","A q5"]
     for i in range(len(questions)):
+            guesses += 1 
             #print(i)
             print(questions[i].split("@")[0])
-            time.sleep(1)
+            time.sleep(2.5)
             print(questions[i].split("@")[1])
             time.sleep(0.5)
             print(questions[i].split("@")[2])
@@ -38,11 +40,16 @@ else:
                 question_ask=input("What do you think A, B or C? ").upper()
                 if question_ask == answers[i]:
                     time.sleep(1)
-                    print("well done "+first_name+" your score is {Add score here}")
-                    break
+                    print("well done "+first_name+" your score is {Add score here}")                    
+                    break                
                 else:
                     time.sleep(1)
-                    print("try again")
+                    
+                    print(guesses)
+                    if guesses == 3:
+                         print("Sorry but your out of tries the correct answer is "+answers[i]) 
+                    else:
+                         print("try again")                    
                     time.sleep(0.5)
             time.sleep(2)
 time.sleep(1)
