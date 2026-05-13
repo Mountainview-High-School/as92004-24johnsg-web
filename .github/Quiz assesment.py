@@ -61,7 +61,12 @@ else:
                         print("try again")                    
                         time.sleep(0.5)
             time.sleep(1.5)
-time.sleep(1)
-print("Well done "+first_name+" you have finished the quiz i hope you enjoyed it and learnt somthing new!!")
-time.sleep(0.5)
-print("Great job!! Your score was "+str(score)+"/50 please exit the quiz and enjoy your day.")
+if age >=14 :
+    print()
+elif age <=7 :
+    print()
+else:
+    time.sleep(1)
+    print("Well done "+first_name+" you have finished the quiz i hope you enjoyed it and learnt somthing new!!")
+    time.sleep(0.5)
+    print("Great job!! Your score was "+str(score)+"/50 please exit the quiz and enjoy your day.")
