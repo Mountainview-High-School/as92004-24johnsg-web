@@ -45,15 +45,14 @@ else:
             while True:
                 question_ask=input("What do you think A, B or C? ").upper()
                 if question_ask == answers[i]:
-                    score += 10
+                    if guesses <1:
+                        score += 10
                     time.sleep(1)
-                    print("well done "+first_name+" your score is "+str(score)) 
+                    print("Your total score is "+str(score)) 
                     break                
                 else:
                     guesses += 1
                     time.sleep(1)
-                    
-                    print(guesses)
                     if guesses == 3:
                         print("Sorry but your out of tries the correct answer is "+answers[i])
                         break 
