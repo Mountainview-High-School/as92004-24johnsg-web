@@ -4,7 +4,7 @@ correct_answers = 0
 score = 0           
 print("Hi there thank you for particeptating im my quiz")         
 time.sleep(game_delay/2)       
-name=input("Please enter your full name. ")        
+name=input("Please enter your full name. ").lstrip()      
 first_name=name.split(" ")[0]           
 time.sleep(game_delay/2)         
 print("Thank you "+first_name)         
