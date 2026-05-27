@@ -1,34 +1,35 @@
-import time        
-game_delay = 1
-correct_answers = 0
-score = 0        
-print("Hi there thank you for participating in my quiz")         
-time.sleep(game_delay/2)       
-name=input("Please enter your full name. ").lstrip()      
-first_name=name.split(" ")[0]           
-time.sleep(game_delay/2)         
-print("Thank you "+first_name)         
-time.sleep(game_delay/2)         
-print("\n")
-print("For this quiz we require you age.")          
-while True:         
-    age_input=input("Please enter your age. ")          
-    if age_input.isdigit():         
-        age = int(age_input)            
-        break           
-    else:           
-        print("sorry your age contains letters or symbols. Please enter only numbers")          
-if age >=14 :           
+import time             #this import time command imports the delay function to my code
+GAME_DELAY = 1          #this variable is a constance
+correct_answers = 0     #this sets the correct answers to 0 for the end 
+score = 0               #this sets the score to 0 for the end 
+print("Hi there thank you for participating in my quiz")#this is a print function it prints what is inside the ("")
+time.sleep(GAME_DELAY/2)                                #this is the use of the constant variable for the time sleep function    
+name=input("Please enter your full name. ").lstrip()    #.lstrip() removes the space at the start of the inputed answer if there is one entered 
+first_name=name.split(" ")[0]                           #.split(" ")[0] splits the name into a list and then selects the first name or anything before the first space 
+time.sleep(GAME_DELAY/2)         
+print("Thank you "+first_name)                          #this uses the list made before and prints it after saying thank you then the first name or first list item
+time.sleep(GAME_DELAY/2)         
+print("\n")                                             #this function prints a new line
+print("For this quiz we require you age.")
+time.sleep(GAME_DELAY/2)          
+while True:                                             #this is a while loop asking while the statement below is true if so it breaks out if not it loops back around |
+    age_input=input("Please enter your age. ")          #                                                                                                              |
+    if age_input.isdigit():                             #                                                                                                              |
+        age = int(age_input)                            #                                                                                                              |
+        break                                           #                                                                                                              |
+    else:                                               #                                                                                                              |
+        print("sorry your age contains letters or symbols. Please enter only numbers")#                                                                                |
+if age >=14 :                                                                         #                                                                                |
     print("Sorry "+first_name+", you're too old for this quiz, why don't you check out our 14+ quiz.")          
 elif age <=7 :          
     print("Sorry "+first_name+", you're too young for this quiz, why don't you check out our under 8s quiz.")           
-    time.sleep(game_delay/2)         
+    time.sleep(GAME_DELAY/2)         
 else:           
-    time.sleep(game_delay*2)
+    time.sleep(GAME_DELAY*2)
     print("\n")
     print("In this quiz you will be asked 5 questions on cyber security. ")
     print("\n")         
-    time.sleep(game_delay*2)           
+    time.sleep(GAME_DELAY*2)           
     questions = ["Someone sends you a text that is hurtful and makes you feel bad about yourself. What should you do? @ A- Delete the message and try to forget about it. @ B- Keep the text and show an adult you trust. @ C- Text the person back saying something mean to them. ",            
                 "You find out that someone has posted an embarrassing picture of you online. What should you do? @ A- Tweet that they are and idiot and a loser. @ B- Ask your friends to give the person a hard time. @ C- Tell an adult you trust.",         
                 "You want to join an online gaming site, what should you username be? @ A- A nickname. @ B- Your name. @ C- Your email address",
@@ -38,13 +39,13 @@ else:
     for i in range(len(questions)):         
             guesses = 0            
             print(questions[i].split("@")[0])           
-            time.sleep(game_delay*2)         
+            time.sleep(GAME_DELAY*2)         
             print(questions[i].split("@")[1])           
-            time.sleep(game_delay*2)         
+            time.sleep(GAME_DELAY*2)         
             print(questions[i].split("@")[2])           
-            time.sleep(game_delay*2)         
+            time.sleep(GAME_DELAY*2)         
             print(questions[i].split("@")[3])           
-            time.sleep(game_delay*2)         
+            time.sleep(GAME_DELAY*2)         
             while guesses<3: 
                 question_ask = ""   
                 while question_ask not in ["A", "B", "C"]:                      
@@ -55,28 +56,28 @@ else:
                     correct_answers += 1
                     if guesses <1:          
                         score += 10         
-                    time.sleep(game_delay)           
+                    time.sleep(GAME_DELAY)           
                     print("Your total score is "+str(score))            
                     break           
                 else:           
                     guesses += 1            
-                    time.sleep(game_delay)           
+                    time.sleep(GAME_DELAY)           
                     if guesses == 3:            
                         print("Sorry but you're out of tries the correct answer is "+answers[i])          
                         break           
                     else:           
                         print("try again")          
-                        time.sleep(game_delay/2)
+                        time.sleep(GAME_DELAY/2)
             print("\n")         
-            time.sleep(game_delay*1.5)         
-time.sleep(game_delay)           
+            time.sleep(GAME_DELAY*1.5)         
+time.sleep(GAME_DELAY)           
 if age >=14 :           
     print()         
 elif age <=7 :          
     print()         
 else:           
-    time.sleep(game_delay)           
+    time.sleep(GAME_DELAY)           
     print("Well done "+first_name+" you have finished the quiz, hope you enjoyed it and learnt something new!!")         
-    time.sleep(game_delay/2)     
+    time.sleep(GAME_DELAY/2)     
     print("\n")    
     print("Great job!! Your score was "+str(score)+" you got "+str(int(score/10))+"/5 correct first try and "+str(correct_answers)+"/5 correct overall, please exit the quiz and enjoy your day.")            
