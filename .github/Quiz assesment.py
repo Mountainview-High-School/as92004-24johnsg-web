@@ -66,7 +66,7 @@ else:                                                                           
                         print("Sorry but you're out of tries the correct answer is "+answers[i])#                          |
                         break#                                                                                             |
                     else:#                                                                                                 |
-                        print("Try again.")#                                                                                |
+                        print("Try again.")#                                                                               |
                         time.sleep(GAME_DELAY/2)#                                                                          |
             print("\n")#                                                                                                   | 
             time.sleep(GAME_DELAY*1.5)         
